@@ -8,6 +8,6 @@ class Solution {
                 string s=haystack.substr(i,x);
                 if(s==needle) return i;
             }
-            return -1;
+        return -1;
         }
     };
