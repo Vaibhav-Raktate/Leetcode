@@ -4,7 +4,6 @@ public:
         int sign =1;
         int Result=0;
         bool Started=false;
-
         for(int i=0;i<s.length();i++){
             if(s[i]==' ' && Started==false) continue;
 
