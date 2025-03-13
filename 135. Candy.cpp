@@ -29,5 +29,6 @@ class Solution {
                 sum=sum+max(left[i],right[i]);
             }
             return sum;
+            
         }
     };
