@@ -8,7 +8,7 @@ class Solution {
             }
             return sum;
         }
-    
+
         int smallestDivisor(vector<int>& nums, int threshold) {
             int low=1,high=*max_element(nums.begin(),nums.end());
             while(low<=high){
