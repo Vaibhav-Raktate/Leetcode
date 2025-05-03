@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int minDominoRotations(vector<int>& tops, vector<int>& bottoms) {
+        int res= helper(tops[0],tops , bottoms);
+        if(res!= -1 || tops[0] == bottoms[0]){
+            return res;
+        }
+        return helper(bottoms[0],tops,bottoms);
+    }
+
+    int helper(int tar , vector<int>& t, vector<int>& b){
+        int tr = 0 , br = 0;
+        int n = t.size();
+        for(int i=0; i<n; i++){
+            if(t[i]!=tar && b[i]!=tar) return -1;
+
+            if(t[i]!=tar)   tr+=1;
+
+            if(b[i]!= tar)  br +=1;
+        }
+        return min(tr,br);
+    }
+};
