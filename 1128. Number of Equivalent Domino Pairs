@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int numEquivDominoPairs(vector<vector<int>>& dominoes) {
+        vector<int>hm(100);
+        int n=dominoes.size();
+        int res= 0;
+
+        for(int i=0; i<n; i++){
+            int t= dominoes[i][0] , b = dominoes[i][1];
+
+            int key =0;
+            if(t<b){
+                key = t * 10 + b;
+            }else{
+                key = b*10 + t;
+            }
+            res += hm[key];
+
+            hm[key] +=1;
+        }
+        return res;
+    }
+};
