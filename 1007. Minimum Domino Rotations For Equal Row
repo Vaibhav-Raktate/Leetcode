@@ -19,5 +19,6 @@ public:
             if(b[i]!= tar)  br +=1;
         }
         return min(tr,br);
+
     }
 };
